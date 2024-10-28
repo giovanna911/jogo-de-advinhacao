@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Javascript para iniciantes</title>
+  <link rel="stylesheet" href="estilos/estilos.css">
+</head>
+
+<body>
+
+  <main>
+    <div class="jogo">
+      <h1>Jogo de advinhação.</h1>
+      <p>Digite um número entre 0 e 50.</p>
+
+      <div class="form">
+        <div>
+          <label for="palpite">Qual é o seu palpite?</label>
+          <input type="number" name="palpite" id="palpite" min="0" max="50" onkeyup="digitarPalpite()">
+        </div>
+
+        <div>
+          <p id="msg-dica"></p>
+          <p>Restam <span id="spn-tentativas">x</span> palpites.</p>
+        </div>
+
+        <div>
+          <button id="btn-enviar-palpite" type="button" disabled class="esconder" onclick="enviarPalpite()">Enviar
+            palpite</button>
+          <button id="btn-reiniciar-jogo" type="button" onclick="reiniciarJogo()">Reiniciar o jogo</button>
+        </div>
+
+        <div>
+          <div id="msg-alerta-sucesso" class="alerta sucesso">
+            Parabéns! Você acertou o número gerado.
+          </div>
+
+          <div id="msg-alerta-falha" class="alerta falha">
+            Que pena! Suas tentativas acabaram.
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script src="scripts/script.js"></script>
+</body>
+
+</html>
